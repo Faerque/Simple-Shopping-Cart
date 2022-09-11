@@ -1,2 +1,15 @@
-export const AINCREMENT = "asus/AINCREMENT";
-export const ADECREMENT = "asus/ADECREMENT";
+import { AINCREMENT, ADECREMENT } from "./actionTypes";
+
+export const increment = (value) => {
+  return {
+    type: AINCREMENT,
+    payload: value,
+  };
+};
+
+export const decrement = (value) => {
+  return {
+    type: ADECREMENT,
+    payload: value,
+  };
+};

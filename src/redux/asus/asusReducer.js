@@ -9,12 +9,12 @@ const asusReducer = (state = initialState, action) => {
     case AINCREMENT:
       return {
         ...state,
-        value: state.value + 1,
+        value: state.value + action.payload,
       };
     case ADECREMENT:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value - action.payload,
       };
     default:
       return state;

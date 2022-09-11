@@ -9,12 +9,12 @@ const canonReducer = (state = initialState, action) => {
     case CINCREMENT:
       return {
         ...state,
-        value: state.value + 1,
+        value: state.value + action.payload,
       };
     case CDECREMENT:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value - action.payload,
       };
     default:
       return state;
