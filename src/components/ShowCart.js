@@ -6,6 +6,8 @@ import { dincrement, ddecrement } from "../redux/dell/action";
 
 export default function ShowCart() {
   const asusCount = useSelector((state) => state.asus.value);
+  const asusPrice = useSelector((state) => state.asus.price);
+  console.log(asusPrice);
   const asusDispatch = useDispatch();
   const asusIncrementHandler = (value) => {
     asusDispatch(aincrement(value));
@@ -16,6 +18,8 @@ export default function ShowCart() {
   };
 
   const canonCount = useSelector((state) => state.canon.value);
+  const canonPrice = useSelector((state) => state.canon.price);
+  console.log(canonPrice);
   const canonDispatch = useDispatch();
 
   const canonIncrementHandler = (value) => {
@@ -27,6 +31,8 @@ export default function ShowCart() {
   };
 
   const dellCount = useSelector((state) => state.dell.value);
+  const dellPrice = useSelector((state) => state.dell.price);
+  console.log(dellPrice);
   const dellDispatch = useDispatch();
 
   const dellIncrementHandler = (value) => {
@@ -35,6 +41,11 @@ export default function ShowCart() {
   const dellDecrementHandler = (value) => {
     dellDispatch(ddecrement(value));
   };
+
+  // Total Count of Product and price
+  const totalCount = asusCount + canonCount + dellCount;
+  const totalPrice = asusPrice + canonPrice + dellPrice;
+
   return (
     <div className="col-span-12 sm:col-span-12 md:col-span-5 lg:col-span-4 xxl:col-span-4">
       <div className="bg-white py-4 px-4 shadow-md rounded-lg my-4 mx-4">
@@ -95,7 +106,7 @@ export default function ShowCart() {
             <div className="flex flex-row space-x-2 w-full items-center rounded-lg">
               <button
                 className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center"
-                onClick={() => dellIncrementHandler(1)}
+                onClick={() => dellDecrementHandler(1)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +126,7 @@ export default function ShowCart() {
               <p>{dellCount}</p>
               <button
                 className="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-1 rounded-full inline-flex items-center"
-                onClick={() => dellDecrementHandler(1)}
+                onClick={() => dellIncrementHandler(1)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +199,7 @@ export default function ShowCart() {
         <div class="flex justify-center items-center text-center">
           <div class="text-xl font-semibold">
             <p>Total Item</p>
-            <p class="text-5xl">0</p>
+            <p class="text-5xl">{totalCount}</p>
           </div>
         </div>
       </div>
@@ -196,7 +207,7 @@ export default function ShowCart() {
         <div class="flex justify-center items-center text-center">
           <div class="text-xl font-semibold">
             <p>Total Price</p>
-            <p class="text-5xl">0</p>
+            <p class="text-5xl">{totalPrice}tk</p>
           </div>
         </div>
       </div>
