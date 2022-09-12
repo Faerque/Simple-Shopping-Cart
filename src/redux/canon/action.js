@@ -1,13 +1,13 @@
 import { CINCREMENT, CDECREMENT } from "./actionTypes";
 
-export const increment = (value) => {
+export const cincrement = (value) => {
   return {
     type: CINCREMENT,
     payload: value,
   };
 };
 
-export const decrement = (value) => {
+export const cdecrement = (value) => {
   return {
     type: CDECREMENT,
     payload: value,

@@ -1,7 +1,7 @@
 import { DINCREMENT, DDECREMENT } from "./actionTypes";
 
 const initialState = {
-  value: 72,
+  value: 0,
 };
 
 const dellReducer = (state = initialState, action) => {

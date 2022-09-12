@@ -1,7 +1,25 @@
 import React from "react";
 import ShowCart from "./ShowCart";
+import { useDispatch } from "react-redux";
+import { aincrement } from "../redux/asus/action";
+import { cincrement } from "../redux/canon/action";
+import { dincrement } from "../redux/dell/action";
 
 export default function Cart() {
+  const asusDispatch = useDispatch();
+
+  const asusIncrementHandler = (value) => {
+    asusDispatch(aincrement(value));
+  };
+  const dellDispatch = useDispatch();
+  const dellIncrementHandler = (value) => {
+    dellDispatch(dincrement(value));
+  };
+  const canonDispatch = useDispatch();
+  const canonIncrementHandler = (value) => {
+    canonDispatch(cincrement(value));
+  };
+
   return (
     <body>
       <div class="bg-gray-50 h-full md:h-screen">
@@ -19,7 +37,10 @@ export default function Cart() {
                   <p class="text-gray-400 text-base">Tk 35,500</p>
                 </div>
                 <div class="text-lg font-semibold">
-                  <button class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center">
+                  <button
+                    class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
+                    onClick={() => asusIncrementHandler(1)}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -45,7 +66,10 @@ export default function Cart() {
                   <p class="text-gray-400 text-base">Tk 9,300</p>
                 </div>
                 <div class="text-lg font-semibold">
-                  <button class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center">
+                  <button
+                    class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
+                    onClick={() => dellIncrementHandler(1)}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
@@ -71,7 +95,10 @@ export default function Cart() {
                   <p class="text-gray-400 text-base">Tk 36,500</p>
                 </div>
                 <div class="text-lg font-semibold">
-                  <button class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center">
+                  <button
+                    class="focus:outline-none bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-2 rounded-full inline-flex items-center"
+                    onClick={() => canonIncrementHandler(1)}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6"
