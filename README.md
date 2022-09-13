@@ -5,13 +5,13 @@
 - URL: https://dancing-snickerdoodle-0b24b4.netlify.app/
 
 
-
 ## Project Description:
 
 This application has been developed using React and Redux. It is a simple shopping cart application which allows the user to add items to the cart and remove items from the cart. The user can also increase or decrease the quantity of the items in the cart. The application also displays the total price of the items in the cart. 
 There two Redux Middleware has been added to the application. The first one is the logger middleware which logs the actions and the state of the application. The second one is the custom middleware named: "stockChecking" which check the client value can't be below 0 and cant be greater than available stock.
 
-**[The application has been deployed on Netlify and can be accessed clicked here] (https://dancing-snickerdoodle-0b24b4.netlify.app/)**
+## Project Setup:
+[The application has been deployed on Netlify and can be accessed clicked here](https://dancing-snickerdoodle-0b24b4.netlify.app/)
 
 ## Used npm packages:
 - **Nodejs - ^v18.9.0**
