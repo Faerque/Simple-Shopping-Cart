@@ -1,3 +1,28 @@
+# A Simple Shopping Cart Application using React and Redux
+[]: # Date: 2017-03-12
+[]: # Description: A Simple Shopping Cart Application using React and Redux
+[]: # Tags: react, redux, shopping cart, react-redux
+[]: # URL: https://dancing-snickerdoodle-0b24b4.netlify.app/
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Description:
+
+This application has been developed using React and Redux. It is a simple shopping cart application which allows the user to add items to the cart and remove items from the cart. The user can also increase or decrease the quantity of the items in the cart. The application also displays the total price of the items in the cart. 
+There two Redux Middleware has been added to the application. The first one is the logger middleware which logs the actions and the state of the application. The second one is the custom middleware named: "stockChecking" which check the client value can't be below 0 and cant be greater than available stock.
+
+### [The application has been deployed on Netlify and can be accessed clicked here] (https://dancing-snickerdoodle-0b24b4.netlify.app/)
+
+## Used npm packages:
+**Nodejs - ^v18.9.0**
+**React - ^v18.2.0**
+**react-redux: ^v8.0.2**
+**redux: ^v4.2.0,**
+**redux-logger": ^v3.0.6**
+**redux-middleware": ^v0.1.21**
+
+## Learn More
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,7 +64,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+
+
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
