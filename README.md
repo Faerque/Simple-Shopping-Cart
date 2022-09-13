@@ -14,12 +14,12 @@ There two Redux Middleware has been added to the application. The first one is t
 ### [The application has been deployed on Netlify and can be accessed clicked here] (https://dancing-snickerdoodle-0b24b4.netlify.app/)
 
 ## Used npm packages:
--**Nodejs - ^v18.9.0**
--**React - ^v18.2.0**
--**react-redux: ^v8.0.2**
--**redux: ^v4.2.0,**
--**redux-logger": ^v3.0.6**
--**redux-middleware": ^v0.1.21**
+- **Nodejs - ^v18.9.0**
+- **React - ^v18.2.0**
+- **react-redux: ^v8.0.2**
+- **redux: ^v4.2.0,**
+- **redux-logger": ^v3.0.6**
+- **redux-middleware": ^v0.1.21**
 
 ## Learn More
 
